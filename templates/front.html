@@ -1,0 +1,72 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {{#if forecast.rainToday}} 
+            ☔️ Rain Today ☔️ 
+        {{else}}
+            ☀️  No Rain today ☀️ 
+        {{/if}}
+    </title>
+</head>
+<body >
+<div class="forecast-container">
+    <div class="spacer"></div>
+    {{#if forecast.rainToday}} 
+        <div class="heading">☔️ Yes</div>
+    {{else}}
+        <div class="heading">☀️ No</div>
+    {{/if}}
+    <div class="today-context">Today there is a {{forecast.percentToday}}% chance of rain</div>
+    <div class="small-spacer"></div>
+    <div class="tomorrow">Tomorrow there will be a {{forecast.percentTomorrow}}% chance of rain</div> 
+    <div class="spacer"></div>
+    <div class="location attribution">We think you are <a href="https://freegeoip.net/?q={{ip}}">here</a></div>
+    <div class="api attribution"><a href="https://darksky.net/poweredby/">Powered by Dark Sky API</a></div>
+    <div class="attribution">A mini project by <a href="https://oliverdon.com/">Oliver Don</a></div>
+
+</div>
+</body>
+<style type="text/css">
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+.forecast-container {
+    background-color: #817568;
+    color: #DEDAE1;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    font-size: 8rem;
+}
+
+.attribution {
+    font-size: 0.7rem;
+
+    padding-bottom: 0.5rem;
+    color: #A0AEB5;
+}
+
+.attribution a {
+    color: #A0AEB5;
+}
+
+.small-spacer {
+    flex-grow: 0.5;
+}
+
+.spacer {
+    flex-grow: 8;
+}
+</style>
+</html>

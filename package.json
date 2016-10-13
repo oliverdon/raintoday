@@ -1,0 +1,35 @@
+{
+  "name": "raintoday",
+  "version": "1.0.0",
+  "description": "fast weather",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "lab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliverdon/raintoday.git"
+  },
+  "keywords": [
+    "weather",
+    "node"
+  ],
+  "author": "Oliver Don",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliverdon/raintoday/issues"
+  },
+  "homepage": "https://github.com/oliverdon/raintoday#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "hapi": "^15.1.0",
+    "hapi-auth-jwt2": "^7.0.0",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "code": "^4.0.0",
+    "lab": "^11.1.0",
+    "nock": "^8.1.0"
+  }
+}
